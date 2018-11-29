@@ -8,7 +8,7 @@ create table igrac(
 	ime varchar(100) not null,
 	broj_licence int not null,
 	momcad int not null,
-	datumrodenja datetime
+	datumrodenja datetime not null
 	);
 	
 create table momcad(
@@ -25,7 +25,7 @@ create table sudac(
 	prezime varchar(100) not null,
 	ime varchar(100) not null,
 	broj_licence int not null,
-	datumrodenja datetime
+	datumrodenja datetime not null
 	);
 	
 create table utakmica(
