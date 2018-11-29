@@ -42,7 +42,7 @@ create table utakmica(
 create table dogadaj(
 	sifra 		int not null primary key auto_increment,
 	utakmica int not null,
-	igrac int not null,
+	momcad int not null,
 	opis varchar(200) not null,
 	vrijeme int not null,
 	vrstadogadaja int not null
@@ -62,6 +62,6 @@ alter table utakmica add foreign key (glavni_sudac) references sudac(sifra);
 alter table utakmica add foreign key (prvi_pomocni) references sudac(sifra);
 alter table utakmica add foreign key (drugi_pomocni) references sudac(sifra);
 
-alter table dogadaj add foreign key (igrac) references igrac(sifra);
+alter table dogadaj add foreign key (momcad) references momcad(sifra);
 alter table dogadaj add foreign key (utakmica) references utakmica(sifra);
 alter table dogadaj add foreign key (vrstadogadaja) references vrstadogadaja(sifra);
